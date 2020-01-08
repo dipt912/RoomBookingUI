@@ -14,6 +14,7 @@ import { RoomDetailComponent } from './components/admin/rooms/room-detail/room-d
 import { UserDetailComponent } from './components/admin/users/user-detail/user-detail.component';
 import { UserEditComponent } from './components/admin/users/user-edit/user-edit.component';
 import { RoomEditComponent } from './components/admin/rooms/room-edit/room-edit.component';
+import { EditBookingComponent } from './components/calender/edit-booking/edit-booking.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { RoomEditComponent } from './components/admin/rooms/room-edit/room-edit.
     UserDetailComponent,
     UserEditComponent,
     RoomEditComponent,
+    EditBookingComponent,
   ],
   imports: [
     BrowserModule,
