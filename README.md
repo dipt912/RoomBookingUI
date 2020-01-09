@@ -18,6 +18,12 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
+# local test
+
+    *   Pull docker container `docker push dipt912/room-booking-ui:latest` and run below comand on your terminal
+    *   `docker run -d --restart=always -p 4200:4200  dipt912/room-booking-ui:latest`
+    *    naviagate to  `http://localhost:4200/`
+
 
 
 
