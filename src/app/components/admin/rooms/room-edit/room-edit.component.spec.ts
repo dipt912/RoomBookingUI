@@ -9,7 +9,7 @@ import { Layout } from '../../../../Models/Room';
 
 describe('RoomEditComponent', () => {
   let component: RoomEditComponent;
-  let dataService = new DataService();
+  const dataService = new DataService();
   let fixture: ComponentFixture<RoomEditComponent>;
 
   beforeEach(async(() => {
