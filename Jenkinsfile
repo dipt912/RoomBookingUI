@@ -12,7 +12,9 @@ node {
     }
 
      stage('Unit Test') {
+           nodejs(nodeJSInstallationName: 'nodejs') {
             sh 'npm run test'
+        }
     }
 
     stage('docker build/push') {
