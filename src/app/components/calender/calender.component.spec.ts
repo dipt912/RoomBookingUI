@@ -1,6 +1,12 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CalenderComponent } from './calender.component';
+import { BookingService } from '../../services/booking.service';
+import { RouterTestingModule } from '@angular/router/testing';
+import { FormsModule } from '@angular/forms';
+import { AppRoutingModule } from '../../app-routing.module';
+import { RouterModule } from '@angular/router';
+
 
 describe('CalenderComponent', () => {
   let component: CalenderComponent;
@@ -8,7 +14,9 @@ describe('CalenderComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CalenderComponent ]
+      declarations: [ CalenderComponent ],
+      providers: [ BookingService],
+      imports: [ FormsModule, RouterTestingModule ]
     })
     .compileComponents();
   }));
@@ -20,6 +28,8 @@ describe('CalenderComponent', () => {
   });
 
   it('should create', () => {
+    component.selectedDate = '';
+    fixture.detectChanges();
     expect(component).toBeTruthy();
   });
 });
