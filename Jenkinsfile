@@ -5,11 +5,14 @@ node {
         sh "git rev-parse --short HEAD > .git/commit-id"
         commit_id = readFile('.git/commit-id').trim()
     }
-    stage('Install Package and Test') {
+    stage('Install Package') {
         nodejs(nodeJSInstallationName: 'nodejs') {
             sh 'npm install --only=dev'
-            sh 'npm test'
         }
+    }
+
+     stage('Unit Test') {
+            sh 'npm run test'
     }
 
     stage('docker build/push') {
