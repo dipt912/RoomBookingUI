@@ -3,8 +3,6 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { RoomDetailComponent } from './room-detail.component';
 import { RouterTestingModule } from '@angular/router/testing';
 import { DataService } from '../../../../services/data.service';
-import { Router } from '@angular/router';
-import { Component } from '@angular/core';
 
 describe('RoomDetailComponent', () => {
   let component: RoomDetailComponent;
