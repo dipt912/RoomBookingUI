@@ -5,6 +5,7 @@ import { DataService } from '../../../../services/data.service';
 import { ResetService } from '../../../../services/reset.service';
 import {  ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { RouterTestingModule } from '@angular/router/testing';
+import { Layout } from '../../../../Models/Room';
 
 describe('RoomEditComponent', () => {
   let component: RoomEditComponent;
@@ -26,7 +27,7 @@ describe('RoomEditComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(RoomEditComponent);
     component = fixture.componentInstance;
-    component.room =  { id: 1, name: '', location: '', capacities: [ {capacity : '', layout: []}]  };
+    component.room =  { id: 1, name: '', location: '', capacities: [ {capacity : 10 , layout: Layout.THEATER}]  };
     fixture.detectChanges();
   });
 
