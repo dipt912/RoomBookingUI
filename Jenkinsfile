@@ -17,9 +17,9 @@ node {
         }
     }
 
-    stage('docker build/push') {
-        docker.withRegistry('https://index.docker.io/v1/', 'dockerhub') {
-            def app = docker.build("dipt912/room-booking-ui:${commit_id}", '.').push()
-        }
-    }
+    // stage('docker build/push') {
+    //     docker.withRegistry('https://index.docker.io/v1/', 'dockerhub') {
+    //         def app = docker.build("dipt912/room-booking-ui:${commit_id}", '.').push()
+    //     }
+    // }
 }
